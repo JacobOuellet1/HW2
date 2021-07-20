@@ -1,0 +1,123 @@
+/*
+File: pacific.css
+GUI Assignment: HW 2 Style a site with external css
+Jacob Ouellet, UMass Lowell Computer Science, Jacob_Ouellet@student.uml.edu
+Edited by Jacob Ouellet
+Copyright (c) 2021 by Wenjin. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by Jacob Ouellet on July 19, 2021 at 7:56 PM
+*/
+
+/* setting the background image, stretching it, shortening it,
+ and making the rest of the page solid blue under*/
+body {
+    background-image: url("ptrbackground.jpg");
+    background-size: 5000px 800px;
+    background-color: #00569F;
+    background-repeat: no-repeat;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* wrapper formatting to set up the layout of the page using a grid template to organize header, nav, main content, and footer*/
+#wrapper {
+    width: 80%;
+    min-width: 600px;
+    background-color: white;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+    'header header header header header header'
+    'nav main main main main main'
+    'nav footer footer footer footer footer';
+}
+
+/*format header, move the header section into the header grid
+also set image to right side and make the rest of the header a solid blue color*/
+#wrapper > header{
+    background-image:url("sunset.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: #000033;
+    grid-area:header;
+}
+h1 {
+    margin-bottom: 0;
+    margin-top: 0px;
+    padding: 10px;
+    color:white;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* nav styling, put nav into the nav grid section and format it*/
+#wrapper > nav{
+    width: 195px;
+    background-color: skyblue;
+    height: 100%;
+    grid-area:nav;
+}
+nav ul {
+    font-size: 1.2em;
+    padding-left: 20px;
+}
+nav li {
+    list-style-type: none;
+}
+nav a{
+    text-decoration: none;
+    color:#000033;
+    font-weight: bold;
+}
+nav a:visited {
+    color: #344873;
+}
+nav a:hover {
+    color: #FFFFFF;
+}
+
+/* footer formating, put the footer in the footer grid section and complete the look*/
+footer {
+    grid-area: footer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 10px;
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+/* content formating, move the content elements into the main grid area*/
+#wrapper > #content{
+    grid-area:main;
+}
+#content p{
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#content ul{
+    list-style-position: inside;
+    padding-left: 80px
+}
+/* make each bullet icon the marker.gif*/
+#content li { 
+    list-style-image: url(marker.gif); 
+} 
+#content h2{
+    padding-left: 20px;
+    color: #3399CC;
+    font-family: Georgia, "Times New Roman", serif;
+}
+/* float the image so the paragraphs, bullets, and etc wrap nicely around the coast image.*/
+#content img{
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.resort{
+    font-weight: bold;
+    color:steelblue;
+}
+#contact {
+    font-size: 90%;
+    padding-left: 20px;
+}
